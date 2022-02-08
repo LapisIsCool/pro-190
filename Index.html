@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Firecrackers Virtual Reality</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="Click.js"></script>
+  </head>
+  <body>
+    <a-scene id="scene">
+      <a-asset-item id="orangeButton" src="orange button.glb"></a-asset-item>
+      <a-asset-item id="blueButton" src="blue button.glb"></a-asset-item>
+      <a-asset-item id="purpleButton" src="purple button.glb"></a-asset-item>
+      <a-asset-item id="peachButton" src="peach button.glb"></a-asset-item>
+
+      <a-entity>
+        <!-- <a-entity
+          id="#orangeB"
+          position="1 -1.4 10"
+          rotation="0 0 0"
+          scale="0.03 0.03 0.03"
+          gltf-model="#orangeButton"
+          on-click
+        >
+        </a-entity> -->
+        <a-sphere
+          position="1 -1 10"
+          color="darkorange"
+          radius="0.4"
+          id="#orangeButton"
+        >
+        </a-sphere>
+      </a-entity>
+
+      <a-entity>
+        <a-entity
+          position="-1 -1.4 10"
+          rotation="0 0 0"
+          scale="0.03 0.03 0.03"
+          gltf-model="#blueButton"
+          on-click
+        >
+        </a-entity>
+      </a-entity>
+      <a-entity>
+        <a-entity
+          position="2 -1.4 10"
+          rotation="0 0 0"
+          scale="0.03 0.03 0.03"
+          gltf-model="#purpleButton"
+          on-click
+        >
+        </a-entity>
+      </a-entity>
+      <a-entity>
+        <a-entity
+          position="-2 -1.4 10"
+          rotation="0 0 0"
+          scale="0.03 0.03 0.03"
+          gltf-model="#peachButton"
+          on-click
+        >
+        </a-entity>
+      </a-entity>
+
+      <a-entity
+        id="startingState"
+        position="0 1 0"
+        spe-particles="
+        color:white;
+        distribution:sphere;
+        randomize-velocity:true;
+        radius:1;
+        particle-count:800;
+        velocity:1;
+        velocity-spread:15;
+        drag:1;
+        max-age:2;
+        duration:-1;
+        blending:additive;
+        active-multiplier:1000;
+        size:1, 1, 1, 1;
+        "
+      >
+      </a-entity>
+      <!-- <button
+        type="button"
+        id="orangeBox"
+        position="1 -1 10"
+        style="color: orange; width: 10; height: 10"
+      >
+        ORANGE
+      </button> -->
+      <!-- <a-box
+        id="orangeBox"
+        color="orange"
+        position="1 -1 10"
+        depth=".5"
+        height=".5"
+        width=".5"
+        on-click
+      ></a-box> -->
+      <!-- <a-box
+        id="blueBox"
+        color="blue"
+        position="-1 -1 10"
+        depth=".5"
+        height=".5"
+        width=".5"
+        on-click
+      ></a-box>
+      <a-box
+        id="purpleBox"
+        color="purple"
+        position="2 -1 10"
+        depth=".5"
+        height=".5"
+        width=".5"
+        on-click
+      ></a-box>
+      <a-box
+        id="peachBox"
+        color="#f98b88"
+        position="-2 -1 10"
+        depth=".5"
+        height=".5"
+        width=".5"
+        on-click
+      ></a-box> -->
+      <a-sky color="black"></a-sky>
+      <a-camera position="0 0 20"></a-camera>
+    </a-scene>
+  </body>
+</html>
